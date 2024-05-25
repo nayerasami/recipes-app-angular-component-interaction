@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-outline-success my-5">New Recipe </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" >
+     <app-recipe-item *ngFor="let item of recipes; let i=index" [item]="item" (recipeEvent)="getData($event)" (click)="sendDataToRecipesComponent()"></app-recipe-item>
+        
+    </div>
+</div>
+
+
+

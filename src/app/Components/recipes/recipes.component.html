@@ -1,0 +1,11 @@
+<div class="row g-5">
+    <div class="col-md-5">
+        <app-recipes-list (myNewEvent)="getDataFromRecipesList($event)" ></app-recipes-list>
+    </div>
+    <div class="col-md-7">
+        <app-recipe-detail *ngIf="itemInfo;else elseBlock" [recipeDetailsInfo]="itemInfo"></app-recipe-detail>
+    <ng-template #elseBlock>
+        <img src="https://www.recipe-eg.com/uploads/1653908229-22.png" alt="recipe-eg" class="w-100 mt-5">
+    </ng-template>
+    </div>
+</div>
